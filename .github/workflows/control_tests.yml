@@ -6,7 +6,7 @@ jobs:
      runs-on: ubuntu-20.04
      steps:
            - name: Checkout on master
-             uses: actions/checkout@v3
+             uses: actions/checkout@v3.6.0
              
            - name: Setting up Python
              uses: actions/setup-python@master
@@ -14,8 +14,9 @@ jobs:
                python-version: "3.x"
 
            - name: Installing Pytest and Flake8
+             uses: install-pinned/pytest@latest
              run: |
-               pip install pytest 
+               # pip install pytest 
                pip install flake8      
          
            - name: Run tests with Pytest
