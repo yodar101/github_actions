@@ -13,10 +13,11 @@ jobs:
              with:
                python-version: "3.x"
 
-           - name: Installing Pytest and Flake8
+           - name: Installing Pytest 
              uses: install-pinned/pytest@latest
+           
+           - name: Installing flake8
              run: |
-               # pip install pytest 
                pip install flake8      
          
            - name: Run tests with Pytest
@@ -24,4 +25,4 @@ jobs:
                pytest file_test.py
 
            - name: Run Flake8
-             run: py-actions/flake8@v2
+             run: py-actions/flake8@latest
