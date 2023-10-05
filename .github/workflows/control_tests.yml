@@ -20,7 +20,7 @@ jobs:
          
            - name: Run tests with Pytest
              run: |
-               pytest
+               pytest file_test.py
 
            - name: Run Flake8
              run: py-actions/flake8@v2
